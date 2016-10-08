@@ -7,5 +7,25 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:drawablePadding="5dp"
+    android:gravity="center"
+    android:button="@null"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
 
+    <style name="style_content_tab">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/tab_text_color_selector</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:drawablePadding">5dp</item>
+
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 </resources>

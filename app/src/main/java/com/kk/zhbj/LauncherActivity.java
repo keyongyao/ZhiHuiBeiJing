@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import com.kk.zhbj.anim.LauncherAnim;
 import com.kk.zhbj.constant.GlobalConstant;
 import com.kk.zhbj.ui.GuideActivity;
+import com.kk.zhbj.ui.MainActivity;
 import com.kk.zhbj.utils.SPutil;
 
 public class LauncherActivity extends Activity {
@@ -26,8 +27,13 @@ public class LauncherActivity extends Activity {
     }
 
     private void goTo() {
-        boolean isFirstRun = SPutil.getBoolean(this, GlobalConstant.ISFIRSTRUN, true);
-        startActivity(new Intent(this, GuideActivity.class));
+        boolean isFirstRun = SPutil.getBoolean(this, GlobalConstant.ISFIRSTRUN, false);
+        if (isFirstRun) {
+            startActivity(new Intent(this, GuideActivity.class));
+        } else {
+            startActivity(new Intent(this, MainActivity.class));
+        }
+
         finish();
     }
 
