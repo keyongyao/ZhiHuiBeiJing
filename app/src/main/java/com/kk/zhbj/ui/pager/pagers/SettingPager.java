@@ -1,4 +1,4 @@
-package com.kk.zhbj.ui.pager;
+package com.kk.zhbj.ui.pager.pagers;
 
 import android.app.Activity;
 import android.util.TypedValue;
@@ -6,6 +6,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+
+import com.kk.zhbj.ui.pager.BasePager;
 
 /**
  * 注释：SettingPager 页面的pager <br>

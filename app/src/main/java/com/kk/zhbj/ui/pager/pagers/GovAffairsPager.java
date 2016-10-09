@@ -1,21 +1,22 @@
-package com.kk.zhbj.ui.pager;
+package com.kk.zhbj.ui.pager.pagers;
 
 import android.app.Activity;
 import android.util.TypedValue;
 import android.view.Gravity;
-import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.kk.zhbj.ui.pager.BasePager;
+
 /**
- * 注释：home 页面的pager <br>
+ * 注释：GovAffairsPager 页面的pager <br>
  * 作者： kk <br>
  * QQ  : <br>
  * 创建时间：2016/10/8 - 17:37 <br>
  */
 
-public class HomePager extends BasePager {
-    public HomePager(Activity mActivity) {
+public class GovAffairsPager extends BasePager {
+    public GovAffairsPager(Activity mActivity) {
         super(mActivity);
     }
 
@@ -27,13 +28,12 @@ public class HomePager extends BasePager {
     @Override
     protected void initContentUI(FrameLayout mFlContent) {
         TextView textView = new TextView(mActivity);
-        textView.setText("这里是home pager");
+        textView.setText("这里是政务");
         textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 30);
         textView.setGravity(Gravity.CENTER);
         mFlContent.addView(textView);
 
-        getmTvTitle().setText("智慧北京");
-        getmIbMenu().setVisibility(View.GONE);
+        getmTvTitle().setText("人口管理");
     }
 
 

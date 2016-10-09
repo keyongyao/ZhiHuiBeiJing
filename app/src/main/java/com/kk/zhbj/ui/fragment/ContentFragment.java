@@ -11,11 +11,11 @@ import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.kk.zhbj.R;
 import com.kk.zhbj.ui.MainActivity;
 import com.kk.zhbj.ui.pager.BasePager;
-import com.kk.zhbj.ui.pager.GovAffairsPager;
-import com.kk.zhbj.ui.pager.HomePager;
-import com.kk.zhbj.ui.pager.NewsCenterPager;
-import com.kk.zhbj.ui.pager.SettingPager;
-import com.kk.zhbj.ui.pager.SmartServicePager;
+import com.kk.zhbj.ui.pager.pagers.GovAffairsPager;
+import com.kk.zhbj.ui.pager.pagers.HomePager;
+import com.kk.zhbj.ui.pager.pagers.NewsCenterPager;
+import com.kk.zhbj.ui.pager.pagers.SettingPager;
+import com.kk.zhbj.ui.pager.pagers.SmartServicePager;
 
 import java.util.ArrayList;
 
@@ -124,6 +124,13 @@ public class ContentFragment extends BaseFragment {
 
     }
 
+    /**
+     * @return 返回新闻Pager
+     */
+    public NewsCenterPager getNewsCenterPager() {
+        return (NewsCenterPager) mBasePagersList.get(1);
+    }
+
     class MyViewPager extends PagerAdapter {
 
         @Override
@@ -148,5 +155,4 @@ public class ContentFragment extends BaseFragment {
             container.removeView((View) (object));
         }
     }
-
 }

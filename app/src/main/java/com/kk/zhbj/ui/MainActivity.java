@@ -39,4 +39,12 @@ public class MainActivity extends SlidingFragmentActivity {
         transaction.replace(R.id.fl_leftmenu, mLeftMenuFragment, LEFTMENUFRAGMENT);
         transaction.commit();
     }
+
+    public LeftMenuFragment getmLeftMenuFragment() {
+        return mLeftMenuFragment;
+    }
+
+    public ContentFragment getmContentFragment() {
+        return mContentFragment;
+    }
 }

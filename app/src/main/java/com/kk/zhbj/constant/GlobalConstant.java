@@ -10,4 +10,10 @@ public class GlobalConstant {
      * 第一次运行APP
      */
     public static String ISFIRSTRUN = "isFirstRun";
+    /**
+     * 新闻 数据 ＵＲＬ
+     */
+
+    public static String SERVER = "192.168.199.216";
+    public static String NEWCATEGROREIES = "http://192.168.199.216:8080/zhbj/categories.json";
 }

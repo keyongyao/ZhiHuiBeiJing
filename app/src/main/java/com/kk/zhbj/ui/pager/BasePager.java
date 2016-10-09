@@ -93,9 +93,10 @@ public abstract class BasePager {
      *
      * @return body 正文 frameLayout
      */
-    /*
+
     public FrameLayout getmFlContent() {
         return mFlContent;
-    }*/
+    }
+
 
 }
