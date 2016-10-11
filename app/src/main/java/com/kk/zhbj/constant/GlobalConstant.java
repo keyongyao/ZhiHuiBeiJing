@@ -14,6 +14,6 @@ public class GlobalConstant {
      * 新闻 数据 ＵＲＬ
      */
 
-    public static String SERVER = "192.168.199.216";
-    public static String NEWCATEGROREIES = "http://192.168.199.216:8080/zhbj/categories.json";
+    public static String SERVER = "http://192.168.199.216:8080/zhbj";
+    public static String NEWCATEGROREIES = SERVER + "/categories.json";
 }

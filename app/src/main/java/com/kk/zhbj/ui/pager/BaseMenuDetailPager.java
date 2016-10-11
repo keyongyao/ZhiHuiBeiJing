@@ -16,8 +16,8 @@ public abstract class BaseMenuDetailPager {
 
     public BaseMenuDetailPager(Activity mActivity) {
         this.mActivity = mActivity;
-        mRootView = initDetailContentUI();
-        initData();
+        mRootView = initDetailContentUI();  //先初始化UI
+        //  initData();   //再填充数据
     }
 
     /**

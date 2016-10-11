@@ -21,11 +21,13 @@ public class MainActivity extends SlidingFragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // 设置侧边菜单
+        // TODO: 2016/10/11  再向左滑动 tab 新闻的 ViewPager 时 不能 返回图片
+
         setBehindContentView(R.layout.layout_leftmenu);
         SlidingMenu slidingMenu = getSlidingMenu();
-        slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        //  slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
         slidingMenu.setBehindOffset(400);
-
         initFragments();
     }
 

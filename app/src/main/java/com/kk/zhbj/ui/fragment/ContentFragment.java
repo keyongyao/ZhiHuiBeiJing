@@ -70,7 +70,7 @@ public class ContentFragment extends BaseFragment {
 
             @Override
             public void onPageSelected(int position) {
-                if (position == 0 || position == 4) {
+                if (position == 0 || position == 4 || position == 1) {
                     setSlidingMenuEnable(false);
                 } else {
                     setSlidingMenuEnable(true);

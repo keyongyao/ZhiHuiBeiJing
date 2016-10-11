@@ -90,7 +90,7 @@ public class NewsCenterPager extends BasePager {
 
         // 初始化 4个菜单详情页面
         mMenuDetailPagerList = new ArrayList<>();
-        mMenuDetailPagerList.add(new NewsMenuDetailPager(mActivity));
+        mMenuDetailPagerList.add(new NewsMenuDetailPager(mActivity, mNewsMenuBean.data.get(0).children));
         mMenuDetailPagerList.add(new TopicMenuDetailPager(mActivity));
         mMenuDetailPagerList.add(new PhotoMenuDetailPager(mActivity));
         mMenuDetailPagerList.add(new InterActiveMenuDetailPager(mActivity));
