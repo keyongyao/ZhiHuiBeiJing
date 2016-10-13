@@ -3,7 +3,7 @@
     android:id="@+id/ll_NewsTab_news_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#0f0"
+
     android:orientation="horizontal"
     android:padding="5dp">
 

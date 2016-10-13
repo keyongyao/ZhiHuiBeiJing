@@ -16,4 +16,5 @@ public class GlobalConstant {
 
     public static String SERVER = "http://192.168.199.216:8080/zhbj";
     public static String NEWCATEGROREIES = SERVER + "/categories.json";
+    public static String HADREADIDS = "hadReadIDs";
 }

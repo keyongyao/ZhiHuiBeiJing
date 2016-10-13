@@ -9,6 +9,7 @@ import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.kk.zhbj.R;
 import com.kk.zhbj.ui.fragment.ContentFragment;
 import com.kk.zhbj.ui.fragment.LeftMenuFragment;
+import com.kk.zhbj.utils.ScreenSizeUtil;
 
 public class MainActivity extends SlidingFragmentActivity {
     public static final String MAINFRAGMENT = "mainFragment";
@@ -27,7 +28,7 @@ public class MainActivity extends SlidingFragmentActivity {
         SlidingMenu slidingMenu = getSlidingMenu();
         //  slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
-        slidingMenu.setBehindOffset(400);
+        slidingMenu.setBehindOffset((int) (ScreenSizeUtil.getScreenWidth(this) * 0.6));
         initFragments();
     }
 
