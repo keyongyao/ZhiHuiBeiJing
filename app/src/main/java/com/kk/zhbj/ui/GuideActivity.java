@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.kk.zhbj.R;
+import com.kk.zhbj.constant.GlobalConstant;
+import com.kk.zhbj.utils.SPutil;
 
 import java.util.ArrayList;
 
@@ -62,6 +64,8 @@ public class GuideActivity extends Activity {
         mBtnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // 标记不是第一次运行
+                SPutil.putBoolean(mActivity, GlobalConstant.ISFIRSTRUN, false);
                 startActivity(new Intent(mActivity, MainActivity.class));
                 mActivity.finish();
             }

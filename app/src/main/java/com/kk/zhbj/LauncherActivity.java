@@ -27,7 +27,7 @@ public class LauncherActivity extends Activity {
     }
 
     private void goTo() {
-        boolean isFirstRun = SPutil.getBoolean(this, GlobalConstant.ISFIRSTRUN, false);
+        boolean isFirstRun = SPutil.getBoolean(this, GlobalConstant.ISFIRSTRUN, true);
         if (isFirstRun) {
             startActivity(new Intent(this, GuideActivity.class));
         } else {

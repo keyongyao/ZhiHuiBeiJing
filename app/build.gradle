@@ -26,4 +26,5 @@ dependencies {
     compile 'junit:junit:4.12'
     compile project(':slidingmenu')
     compile project(':viewPagerIndicatorLibrary')
+    compile 'com.github.tatsuyuki25:AsyncTask:1.2.1'
 }

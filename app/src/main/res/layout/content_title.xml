@@ -32,6 +32,7 @@
         android:src="@mipmap/back"
         android:visibility="invisible" />
 
+    <!--新闻阅读按钮-->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,7 +47,7 @@
             android:layout_gravity="center_vertical"
             android:background="@null"
             android:src="@mipmap/icon_textsize"
-            android:visibility="invisible" />
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@+id/ib_readNews_share"
@@ -57,6 +58,34 @@
             android:layout_marginRight="5dp"
             android:background="@null"
             android:src="@mipmap/icon_share"
-            android:visibility="invisible" />
+            android:visibility="gone" />
     </LinearLayout>
+
+    <!-- 组图图片视图样式按钮-->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+
+        android:layout_marginRight="10dp">
+
+        <ImageButton
+            android:id="@+id/ib_photoNews_viewType_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:src="@mipmap/icon_pic_list_type"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ib_photoNews_viewType_gird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:src="@mipmap/icon_pic_grid_type"
+            android:visibility="gone" />
+    </FrameLayout>
+
 </RelativeLayout>

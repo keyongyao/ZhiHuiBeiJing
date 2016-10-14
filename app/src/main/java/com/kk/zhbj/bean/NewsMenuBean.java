@@ -26,14 +26,19 @@ public class NewsMenuBean {
         public int id;
         public String title;
         public int type;
+        public String url;
 
         @Override
         public String toString() {
             return "NewsData{" +
-                    "title='" + title + '\'' +
-                    ", children=" + children +
+                    "children=" + children +
+                    ", id=" + id +
+                    ", title='" + title + '\'' +
+                    ", type=" + type +
+                    ", url='" + url + '\'' +
                     '}';
         }
+
     }
 
     public class ChildContent {

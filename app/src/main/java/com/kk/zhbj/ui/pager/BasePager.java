@@ -23,6 +23,9 @@ public abstract class BasePager {
     private TextView mTvTitle;
     private ImageButton mIbMenu;
     private FrameLayout mFlContent;
+    private ImageButton mIbList;
+    private ImageButton mIbGird;
+
 
     public BasePager(Activity mActivity) {
         this.mActivity = mActivity;
@@ -68,10 +71,13 @@ public abstract class BasePager {
         View inflate = View.inflate(mActivity, R.layout.contentpager_base, null);
         // 标题
         mTvTitle = (TextView) inflate.findViewById(R.id.tv_contentTitle_title);
-        // 右侧 菜单按钮
+        // 左侧 菜单按钮
         mIbMenu = (ImageButton) inflate.findViewById(R.id.ib_contentTitle_menu);
         // body frameLayout 布局
         mFlContent = (FrameLayout) inflate.findViewById(R.id.fl_contentPager_base);
+        // 右侧组图的视图按钮
+        mIbList = (ImageButton) inflate.findViewById(R.id.ib_photoNews_viewType_list);
+        mIbGird = (ImageButton) inflate.findViewById(R.id.ib_photoNews_viewType_gird);
         return inflate;
     }
 
@@ -98,5 +104,18 @@ public abstract class BasePager {
         return mFlContent;
     }
 
+    /**
+     * @return 组图右侧列表样式按钮 默认：visibility:gone
+     */
+    public ImageButton getmIbList() {
+        return mIbList;
+    }
+
+    /**
+     * @return 组图右侧格子样式按钮 默认：visibility:gone
+     */
+    public ImageButton getmIbGird() {
+        return mIbGird;
+    }
 
 }

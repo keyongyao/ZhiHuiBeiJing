@@ -92,7 +92,8 @@ public class NewsCenterPager extends BasePager {
         mMenuDetailPagerList = new ArrayList<>();
         mMenuDetailPagerList.add(new NewsMenuDetailPager(mActivity, mNewsMenuBean.data.get(0).children));
         mMenuDetailPagerList.add(new TopicMenuDetailPager(mActivity));
-        mMenuDetailPagerList.add(new PhotoMenuDetailPager(mActivity));
+        // 给 PhotoMenuDetailPager 传去 2 个 按钮
+        mMenuDetailPagerList.add(new PhotoMenuDetailPager(mActivity, getmIbList(), getmIbGird()));
         mMenuDetailPagerList.add(new InterActiveMenuDetailPager(mActivity));
         Message msg = Message.obtain();
         msg.what = LoadingOK;
@@ -117,6 +118,15 @@ public class NewsCenterPager extends BasePager {
         contentFrameLayout.removeAllViews();
         contentFrameLayout.addView(mMenuDetailPagerList.get(position).mRootView);
         getmTvTitle().setText(mNewsMenuBean.data.get(position).title);
+        // 判断  右侧的 图片样式按钮 是否显示
+        if (position != 2) {
+            getmIbGird().setVisibility(View.INVISIBLE);
+            getmIbList().setVisibility(View.INVISIBLE);
+
+        } else {
+            getmIbGird().setVisibility(View.VISIBLE);
+        }
+
     }
 
 }
